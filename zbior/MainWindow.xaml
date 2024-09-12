@@ -6,19 +6,21 @@
         xmlns:local="clr-namespace:zbior"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label  Content="Liczba a" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="42,31,0,0" VerticalAlignment="Top" Width="72" Height="47" FontSize="18"/>
+            <Label Content="Liczba b" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="42,109,0,0" VerticalAlignment="Top" Width="73" Height="46" FontSize="18"/>
+            <TextBox x:Name="liczba_a" HorizontalAlignment="Left" Margin="42,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="18" MaxLength="5"/>
+            <TextBox x:Name="liczba_b" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="42,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="18" MaxLength="5"/>
+            <Button Content="Wyświetl" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="65,217,0,0" VerticalAlignment="Top" FontSize="18" Click="Button_Click"/>
 
 
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Label  Content="Liczba a" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="42,31,0,0" VerticalAlignment="Top" Width="72" Height="47" FontSize="18"/>
-        <Label Content="Liczba b" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="42,109,0,0" VerticalAlignment="Top" Width="73" Height="46" FontSize="18"/>
-        <TextBox x:Name="liczba_a" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="42,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="18"/>
-        <TextBox x:Name="liczba_b" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="42,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="18"/>
-        <Button Content="Wyświetl" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="65,217,0,0" VerticalAlignment="Top" FontSize="18" Click="Button_Click"/>
-        <Label x:Name="wynik" Content="" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="42,297,0,0" VerticalAlignment="Top" Height="102" Width="645"/>
+            <TextBlock x:Name="wynik" Margin="74,23,74,32"  Text="" TextWrapping="Wrap" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5"  />
 
-    </Grid>
+        </Grid>
+    </ScrollViewer>
 </Window>

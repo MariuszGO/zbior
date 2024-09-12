@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -23,11 +24,9 @@ namespace zbior
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            wynik.Content = " ";
+            
+            wynik.Text = " ";
             Int32 licz_a, licz_b,tmp;
-
-           
-
 
             if (Int32.TryParse(liczba_a.Text, out licz_a) && Int32.TryParse(liczba_b.Text, out licz_b))
             {
@@ -40,7 +39,7 @@ namespace zbior
 
                     for (int i = licz_a; i <= licz_b; i++)
                 {
-                    wynik.Content= wynik.Content+ i.ToString() + " ";
+                    wynik.Text= wynik.Text+ i.ToString() + " ";
 
                 }
 
